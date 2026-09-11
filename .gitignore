@@ -1,0 +1,14 @@
+.venv/
+.profiles/
+.env
+.env.*
+!.env.example
+profiles.yml
+target/
+logs/
+dbt_packages/
+__pycache__/
+*.pyc
+.DS_Store
+source_data/
+*.jsonl

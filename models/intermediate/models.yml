@@ -1,0 +1,14 @@
+version: 2
+models:
+  - name: int_invoice_line_base
+    description: One source invoice line with optional invoice header and original amount precision.
+    columns:
+      - name: invoice_line_id
+        data_tests: [not_null, unique]
+      - name: source_total_amount
+        description: Original source amount; no recalculation, currency assumption, or rounding.
+        data_tests: [not_null]
+  - name: int_product_lookup
+    description: At most one resolved product per company and external accounting-item reference; ambiguous candidates remain null.
+  - name: int_customer_lookup
+    description: One row per company and remote customer reference. Direct global IDs, explicit parent contacts, and unique scoped exact names have separate provenance statuses. Centers require explicit contact references.

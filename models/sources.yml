@@ -1,0 +1,35 @@
+version: 2
+sources:
+  - name: confido
+    database: CONFIDO_DEMO
+    schema: PUBLIC
+    description: Employer-provided read-only interview data.
+    tables:
+      - name: invoice_items
+        identifier: INVOICE_ITEMS
+        columns:
+          - name: id
+            data_tests: [not_null, unique]
+          - name: total_amount
+            data_tests: [not_null]
+      - name: invoices
+        identifier: INVOICES
+        columns:
+          - name: id
+            data_tests: [not_null, unique]
+      - name: items
+        identifier: ITEMS
+        columns:
+          - name: id
+            data_tests: [not_null, unique]
+      - name: products
+        identifier: PRODUCTS
+        columns:
+          - name: id
+            data_tests: [not_null, unique]
+      - name: contacts
+        identifier: CONTACTS
+      - name: global_customers
+        identifier: GLOBAL_CUSTOMERS
+      - name: confido_distribution_centers
+        identifier: CONFIDO_DISTRIBUTION_CENTERS

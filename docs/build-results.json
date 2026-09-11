@@ -1,0 +1,179 @@
+{
+  "generated_at": "2026-09-11T00:38:52.105806Z",
+  "command": "dbt build --select +invoice_lines --threads 1",
+  "results": [
+    {
+      "unique_id": "operation.confido_takehome.confido_takehome-on-run-start-0",
+      "status": "success",
+      "failures": 0
+    },
+    {
+      "unique_id": "model.confido_takehome.int_customer_lookup",
+      "status": "success",
+      "failures": null
+    },
+    {
+      "unique_id": "test.confido_takehome.source_not_null_confido_invoice_items_id.52597caeb0",
+      "status": "pass",
+      "failures": 0
+    },
+    {
+      "unique_id": "test.confido_takehome.source_not_null_confido_invoice_items_total_amount.862603551f",
+      "status": "pass",
+      "failures": 0
+    },
+    {
+      "unique_id": "test.confido_takehome.source_not_null_confido_invoices_id.2f179ed731",
+      "status": "pass",
+      "failures": 0
+    },
+    {
+      "unique_id": "test.confido_takehome.source_not_null_confido_items_id.722da33994",
+      "status": "pass",
+      "failures": 0
+    },
+    {
+      "unique_id": "test.confido_takehome.source_not_null_confido_products_id.57b06c816b",
+      "status": "pass",
+      "failures": 0
+    },
+    {
+      "unique_id": "test.confido_takehome.source_unique_confido_invoice_items_id.376ad5b797",
+      "status": "pass",
+      "failures": 0
+    },
+    {
+      "unique_id": "test.confido_takehome.source_unique_confido_invoices_id.02ac5a66c2",
+      "status": "pass",
+      "failures": 0
+    },
+    {
+      "unique_id": "test.confido_takehome.source_unique_confido_items_id.4338833012",
+      "status": "pass",
+      "failures": 0
+    },
+    {
+      "unique_id": "test.confido_takehome.source_unique_confido_products_id.c6372e85b9",
+      "status": "pass",
+      "failures": 0
+    },
+    {
+      "unique_id": "test.confido_takehome.customer_lookup_grain",
+      "status": "pass",
+      "failures": 0
+    },
+    {
+      "unique_id": "test.confido_takehome.customer_lookup_resolution",
+      "status": "pass",
+      "failures": 0
+    },
+    {
+      "unique_id": "model.confido_takehome.int_invoice_line_base",
+      "status": "success",
+      "failures": null
+    },
+    {
+      "unique_id": "model.confido_takehome.int_product_lookup",
+      "status": "success",
+      "failures": null
+    },
+    {
+      "unique_id": "test.confido_takehome.invoice_base_preserves_lines_and_amounts",
+      "status": "pass",
+      "failures": 0
+    },
+    {
+      "unique_id": "test.confido_takehome.not_null_int_invoice_line_base_invoice_line_id.61948cb717",
+      "status": "pass",
+      "failures": 0
+    },
+    {
+      "unique_id": "test.confido_takehome.not_null_int_invoice_line_base_source_total_amount.520d986400",
+      "status": "pass",
+      "failures": 0
+    },
+    {
+      "unique_id": "test.confido_takehome.unique_int_invoice_line_base_invoice_line_id.5d2a1d576e",
+      "status": "pass",
+      "failures": 0
+    },
+    {
+      "unique_id": "test.confido_takehome.product_lookup_grain",
+      "status": "pass",
+      "failures": 0
+    },
+    {
+      "unique_id": "test.confido_takehome.product_lookup_resolves_only_unique_candidates",
+      "status": "pass",
+      "failures": 0
+    },
+    {
+      "unique_id": "model.confido_takehome.invoice_lines",
+      "status": "success",
+      "failures": null
+    },
+    {
+      "unique_id": "test.confido_takehome.invoice_lines_preserve_currency",
+      "status": "pass",
+      "failures": 0
+    },
+    {
+      "unique_id": "test.confido_takehome.invoice_lines_preserve_quantity",
+      "status": "pass",
+      "failures": 0
+    },
+    {
+      "unique_id": "test.confido_takehome.invoice_lines_preserve_source",
+      "status": "pass",
+      "failures": 0
+    },
+    {
+      "unique_id": "test.confido_takehome.not_null_invoice_lines_amount.b86d3d106c",
+      "status": "pass",
+      "failures": 0
+    },
+    {
+      "unique_id": "test.confido_takehome.not_null_invoice_lines_invoice_line_id.443015ceaa",
+      "status": "pass",
+      "failures": 0
+    },
+    {
+      "unique_id": "test.confido_takehome.relationships_invoice_lines_distribution_center_id__id__source_confido_confido_distribution_centers_.493cbac552",
+      "status": "pass",
+      "failures": 0
+    },
+    {
+      "unique_id": "test.confido_takehome.relationships_invoice_lines_global_customer_id__id__source_confido_global_customers_.a844a33820",
+      "status": "pass",
+      "failures": 0
+    },
+    {
+      "unique_id": "test.confido_takehome.relationships_invoice_lines_product_id__id__source_confido_products_.0218753135",
+      "status": "pass",
+      "failures": 0
+    },
+    {
+      "unique_id": "test.confido_takehome.unique_invoice_lines_invoice_line_id.03bf327865",
+      "status": "pass",
+      "failures": 0
+    }
+  ],
+  "model_test_macro_sha256": {
+    "models/sources.yml": "952626d6907c2e28fa2e7555551c4f6fe74eca58bed201a22ee5e9a8e45edcde",
+    "models/marts/invoice_lines.sql": "d7a8604a7b8558828fa4d1a648620ac1681e12ccad370d15a0421df4c430ea9e",
+    "models/marts/models.yml": "82d3ee2b695cb73ecd65f0433bc75a33b7b6d60de4470d2e781a860ae231e264",
+    "models/intermediate/int_customer_lookup.sql": "344aa6dc5aee7f0e64610cba2dea1f46af74e539968f98fa5b6a1dbe44754717",
+    "models/intermediate/models.yml": "9e5aa9100f31a0369ed67d9f5794c78ec83b84fc403bc4fba80be4f970526760",
+    "models/intermediate/int_product_lookup.sql": "7cc45beac73c463770a25164ad43a8f41f8b92f4c46b8a3266c9b4970d71c8f4",
+    "models/intermediate/int_invoice_line_base.sql": "a782e02d3e071cfa2422b03f9d4ab49c62744573bf72e6bb7d8055df6a5978ad",
+    "tests/customer_lookup_resolution.sql": "b544cfea87b8b22f86d82deead5f28164b0b67040e9a7a16dddf4ca47f37853c",
+    "tests/invoice_base_preserves_lines_and_amounts.sql": "054ee3ddd3e10318b98ffbeefae2fb0002be3c0c0645922f8bd947d0064d0ca9",
+    "tests/invoice_lines_preserve_source.sql": "8d772e227a5ff124d6ec2fdfed62a9a40024927040ae088087e82381c5e701ee",
+    "tests/invoice_lines_preserve_currency.sql": "fc07d299889ee20c0f6a20fb3010ee34699683aa456948b33d824189d6f998e6",
+    "tests/customer_lookup_grain.sql": "e99fb7a66225a84ea94d819016a1701622e22154f009cbace11c01b0505469e0",
+    "tests/product_lookup_resolves_only_unique_candidates.sql": "eaf0574a68c750e099ecfc827b4ac88dc4f9f0528f2092647449dd47292b7d8a",
+    "tests/product_lookup_grain.sql": "946dec849a565209add9c7cb96298f3b1330e08e33f9cda64d48448462c63125",
+    "tests/invoice_lines_preserve_quantity.sql": "80707bfa20996b864e946103d7742b0868229c7cd80b37b94dbebba16fffd457",
+    "macros/verify_setup_target.sql": "2d61e6ab781481bbdf5e56e885b0f3e761afb28e4d3d81599e1a9979e1876b38"
+  }
+}

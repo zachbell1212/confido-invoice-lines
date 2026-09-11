@@ -1,0 +1,30 @@
+version: 2
+models:
+  - name: invoice_lines
+    description: Standardized invoice lines with original signed amount and source currency. Product, global customer, and distribution center IDs are nullable; mapping statuses explain provenance and gaps. Missing currency is not assumed to be USD.
+    columns:
+      - name: invoice_line_id
+        data_tests: [not_null, unique]
+      - name: amount
+        description: Original TOTAL_AMOUNT, without rounding or quantity-based recalculation. No currency conversion is asserted.
+        data_tests: [not_null]
+      - name: quantity
+        description: Original invoice-item QUANTITY, including nulls; not inferred or recalculated.
+      - name: product_id
+        data_tests:
+          - relationships:
+              arguments:
+                to: source('confido', 'products')
+                field: id
+      - name: global_customer_id
+        data_tests:
+          - relationships:
+              arguments:
+                to: source('confido', 'global_customers')
+                field: id
+      - name: distribution_center_id
+        data_tests:
+          - relationships:
+              arguments:
+                to: source('confido', 'confido_distribution_centers')
+                field: id

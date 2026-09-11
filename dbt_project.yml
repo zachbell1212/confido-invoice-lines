@@ -1,0 +1,11 @@
+name: confido_takehome
+version: '1.0.0'
+config-version: 2
+profile: default
+model-paths: [models]
+clean-targets: [target, dbt_packages]
+models:
+  confido_takehome:
+    +materialized: view
+on-run-start:
+  - "{{ verify_setup_target() }}"
